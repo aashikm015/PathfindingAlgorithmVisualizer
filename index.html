@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title>Pathfinding Algorithm Visualizer</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link id="cssTheme" rel="stylesheet" href="public/styling/cssBasic.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="public/styling/c_icon.png"
+    />
+  </head>
+  <body>
+    <div id="navbarDiv">
+      <nav class="navbar navbar-inverse" style="background-color: #03203c">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a id="refreshButton" class="navbar-brand" href="#"
+              ><img
+                src="./public/styling/logo.png"
+                alt=""
+                width="90px"
+                height="30px"
+            /></a>
+          </div>
+          <ul class="nav navbar-nav" style="background-color: #03203c">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                >Algorithms <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li id="startButtonDijkstra">
+                  <a href="#">Dijkstra's Algorithm</a>
+                </li>
+                <li id="startButtonAStar2"><a href="#">A* Search</a></li>
+                <li id="startButtonGreedy">
+                  <a href="#">Greedy Best-first Search</a>
+                </li>
+                <li id="startButtonAStar"><a href="#"></a></li>
+                <li id="startButtonAStar3">
+                  <a href="#"></a>
+                </li>
+                <li id="startButtonBidirectional">
+                  <a href="#"></a>
+                </li>
+                <li id="startButtonBFS">
+                  <a href="#">Breadth-first Search</a>
+                </li>
+                <li id="startButtonDFS"><a href="#">Depth-first Search</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                >Mazes &amp; Patterns <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li id="startButtonCreateMazeTwo">
+                  <a href="#">Recursive Division</a>
+                </li>
+                <li id="startButtonCreateMazeThree">
+                  <a href="#">Recursive Division (vertical skew)</a>
+                </li>
+                <li id="startButtonCreateMazeFour">
+                  <a href="#">Recursive Division (horizontal skew)</a>
+                </li>
+                <li id="startButtonCreateMazeOne">
+                  <a href="#">Basic Random Maze</a>
+                </li>
+                <li id="startButtonCreateMazeWeights">
+                  <a href="#">Basic Weight Maze</a>
+                </li>
+                <li id="startStairDemonstration">
+                  <a href="#">Simple Stair Pattern</a>
+                </li>
+              </ul>
+            </li>
+            <li id="startButtonAddObject"><a href="#">Add Bomb</a></li>
+            <li id="startButtonStart">
+              <button
+                id="actualStartButton"
+                class="btn btn-default navbar-btn"
+                type="button"
+              >
+                Visualize!
+              </button>
+            </li>
+            <li id="startButtonClearBoard"><a href="#">Clear Board</a></li>
+            <li id="startButtonClearWalls">
+              <a href="#">Clear Walls &amp; Weights</a>
+            </li>
+            <li id="startButtonClearPath"><a href="#">Clear Path</a></li>
+            <li class="dropdown">
+              <a
+                id="adjustSpeed"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                >Speed: Fast <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li id="adjustFast"><a href="#">Fast</a></li>
+                <li id="adjustAverage"><a href="#">Average</a></li>
+                <li id="adjustSlow"><a href="#">Slow</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="tutorial">
+      <h3>Welcome to Pathfinding Visualizer!</h3>
+      <p>
+        Visualizations of algorithms contribute to improving computer science
+        education. The process of teaching and learning of algorithms is often
+        complex and hard to understand problem. Visualization is a useful
+        technique for learning in any computer science course. The algorithms
+        are <br />=>Dijkstra's Algorithm <br />=>A * Search <br />=>Greedy
+        Best-First Search <br />=>Breadth-first Search <br />=>Depth-first
+        Search
+      </p>
+      <div id="tutorialCounter">1</div>
+
+      <button
+        id="skipButton"
+        class="btn btn-default navbar-btn"
+        style="background-color: #38bcff"
+        type="button"
+      >
+        Get Started
+      </button>
+    </div>
+    <div id="mainGrid">
+      <div id="mainText"></div>
+      <div id="algorithmDescriptor"></div>
+      <table id="board" />
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="public/browser/bundle.js"></script>
+</html>
